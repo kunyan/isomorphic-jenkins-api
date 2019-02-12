@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import CustomError from './error';
 
 export interface IJenkinsAPIOption {
   host: string;
@@ -31,7 +32,15 @@ export default class Fetch {
 
   public async callAPI<T>(url: string, options: RequestInit) {
     return fetch(url, options)
-      .then(res => res.json())
+      .catch(err => {
+        throw err;
+      })
+      .then(res => {
+        if (res.status === 200) {
+          return res.json();
+        }
+        return new CustomError(res.status, res.statusText).toJSON();
+      })
       .then(obj => obj as T);
   }
 
