@@ -1,21 +1,24 @@
 {
-  "name": "jenkins-api",
+  "name": "isomorphic-jenkins-api",
   "version": "0.0.1",
   "main": "index.js",
-  "repository": "git@github.com:kunyan/jenkins-api.git",
+  "repository": "git@github.com:kunyan/isomorphic-jenkins-api.git",
   "author": "Kun Yan <kyan@redhat.com>",
   "license": "MIT",
   "scripts": {
+    "build": "rollup -c rollup.config.ts",
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "tslint src/**/*.ts"
+  },
+  "peerDependencies": {
+    "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
     "@types/isomorphic-fetch": "^0.0.34",
     "@types/jest": "^24.0.0",
     "coveralls": "^3.0.2",
     "husky": "^1.3.1",
-    "isomorphic-fetch": "^2.2.1",
     "jest": "^24.1.0",
     "lint-staged": "^8.1.3",
     "prettier": "^1.16.4",
