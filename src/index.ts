@@ -1,6 +1,5 @@
 import Info from './api/info';
 import Job from './api/job';
-import { IJenkins } from './models/info';
 import Fetch from './utils/fetch';
 
 export interface IJenkinsAPIOption {

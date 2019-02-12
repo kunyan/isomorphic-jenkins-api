@@ -1,7 +1,8 @@
 {
   "name": "isomorphic-jenkins-api",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "dist/isomorphic-jenkins-api.js",
+  "types": "dist/src/index.d.ts",
   "repository": "git@github.com:kunyan/isomorphic-jenkins-api.git",
   "author": "Kun Yan <kyan@redhat.com>",
   "license": "MIT",
