@@ -1,1 +1,1 @@
-# Jenkins API &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kunyan/jenkins-api/blob/master/LICENSE)
+# Jenkins API &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kunyan/jenkins-api/blob/master/LICENSE) [![Build Status](https://travis-ci.com/kunyan/jenkins-api.svg?branch=master)](https://travis-ci.com/kunyan/jenkins-api) [![Coverage Status](https://coveralls.io/repos/github/kunyan/jenkins-api/badge.svg)](https://coveralls.io/github/kunyan/jenkins-api)
