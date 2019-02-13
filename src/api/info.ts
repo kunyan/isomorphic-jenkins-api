@@ -1,4 +1,4 @@
-import JenkinsAPI from '..';
+import JenkinsAPI from '../index';
 import { IJenkins } from '../models/info';
 
 export default class Info {

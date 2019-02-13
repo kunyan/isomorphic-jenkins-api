@@ -10,8 +10,16 @@ beforeAll(() => {
   });
 });
 
-test('get all jobs', async () => {
+test('get single job', async () => {
   const jobName = 'test-mono-mainline-linux';
   const response = await api.job.get(jobName);
-  console.log(response);
+  expect(response.builds).toBeInstanceOf(Array);
+}, 100000);
+
+test.skip('trigger a job build', async () => {
+  const jobName = 'test-mono-mainline-linux';
+  const parameters = {
+    tag: 'latest'
+  };
+  await api.job.buildWithParameters(jobName, parameters);
 }, 100000);

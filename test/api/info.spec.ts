@@ -12,5 +12,6 @@ beforeAll(() => {
 
 test('get all jobs', async () => {
   const response = await api.info.get();
-  console.log(response);
+  expect(response._class).toBe('hudson.model.Hudson');
+  expect(response.jobs).toBeInstanceOf(Array);
 }, 100000);
